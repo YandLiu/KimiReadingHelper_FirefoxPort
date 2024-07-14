@@ -139,14 +139,13 @@ var e, t;
                                     } = new URL(e.url || ''),
                                     s = `${t}//${r}${i}`;
                                 ['file:', 'https:', 'http:'].includes(t) &&
-                                    (chrome.sidePanel.setOptions({
+                                    (browser.sidebarAction.setPanel({
                                         tabId: e.id,
-                                        enabled: !0,
-                                        path: `tabs/sidepanel.html?url=${encodeURIComponent(
+                                        panel: `tabs/sidepanel.html?url=${encodeURIComponent(
                                             s
                                         )}&tabId=${e.id}`
                                     }),
-                                    chrome.sidePanel.open({tabId: e.id})),
+                                    browser.sidebarAction.open()),
                                     chrome.scripting.executeScript(
                                         {
                                             target: {tabId: e.id},

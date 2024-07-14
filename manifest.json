@@ -21,7 +21,12 @@
     "author": "tudou527",
     "name": "Kimi 阅读助手",
     "description": "享受 AI 辅助阅读的乐趣~",
-    "background": {"service_worker": "static/background/index.js"},
+    "background": {"scripts": ["static/background/index.js"]},
+    "sidebar_action": {
+        "default_title": "Kimi 阅读助手",
+        "default_panel": "tabs/sidepanel.html",
+        "default_icon": "icon.c766bb78.png"
+    },
     "permissions": ["storage", "activeTab", "sidePanel", "scripting"],
     "content_scripts": [
         {
@@ -52,7 +57,7 @@
         {"resources": ["tabs/sidepanel.html"], "matches": ["<all_urls>"]}
     ],
     "commands": {
-        "_execute_action": {
+        "_execute_sidebar_action": {
             "suggested_key": {
                 "chromeos": "Ctrl+Shift+E",
                 "default": "Ctrl+Shift+E",
