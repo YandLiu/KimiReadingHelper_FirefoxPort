@@ -8,6 +8,11 @@
         "128": "icon128.plasmo.3c1ed2d2.png"
     },
     "manifest_version": 3,
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "KimiReadingHelperFirefoxPort@example.com"
+        }
+    },
     "action": {
         "default_icon": {
             "16": "icon16.plasmo.6c567d50.png",
