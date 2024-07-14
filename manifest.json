@@ -1,3 +1,65 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
-"icons":{"16":"icon16.plasmo.6c567d50.png","32":"icon32.plasmo.76b92899.png","48":"icon48.plasmo.aced7582.png","64":"icon64.plasmo.8bb5e6e0.png","128":"icon128.plasmo.3c1ed2d2.png"},"manifest_version":3,"action":{"default_icon":{"16":"icon16.plasmo.6c567d50.png","32":"icon32.plasmo.76b92899.png","48":"icon48.plasmo.aced7582.png","64":"icon64.plasmo.8bb5e6e0.png","128":"icon128.plasmo.3c1ed2d2.png"}},"version":"0.7.9","author":"tudou527","name":"Kimi 阅读助手","description":"享受 AI 辅助阅读的乐趣~","background":{"service_worker":"static/background/index.js"},"permissions":["storage","activeTab","sidePanel","scripting"],"content_scripts":[{"matches":["*://*.flomoapp.com/*"],"js":["flomo.18a4fbd0.js"],"all_frames":true,"run_at":"document_end","css":[]},{"matches":["*://kimi.moonshot.cn/*"],"js":["kimi.3f628149.js"],"all_frames":true,"run_at":"document_end","css":[]}],"host_permissions":["https://*.moonshot.cn/*","https://*.volces.com/*","https://*.apphunt.site/*","https://*.flomoapp.com/*","file://*/*","http://*/*","https://*/*"],"web_accessible_resources":[{"resources":["tabs/sidepanel.html"],"matches":["<all_urls>"]}],"commands":{"_execute_action":{"suggested_key":{"chromeos":"Ctrl+Shift+E","default":"Ctrl+Shift+E","linux":"Ctrl+Shift+E","mac":"Command+Shift+E","windows":"Ctrl+Shift+E"}}}}
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "icons": {
+        "16": "icon16.plasmo.6c567d50.png",
+        "32": "icon32.plasmo.76b92899.png",
+        "48": "icon48.plasmo.aced7582.png",
+        "64": "icon64.plasmo.8bb5e6e0.png",
+        "128": "icon128.plasmo.3c1ed2d2.png"
+    },
+    "manifest_version": 3,
+    "action": {
+        "default_icon": {
+            "16": "icon16.plasmo.6c567d50.png",
+            "32": "icon32.plasmo.76b92899.png",
+            "48": "icon48.plasmo.aced7582.png",
+            "64": "icon64.plasmo.8bb5e6e0.png",
+            "128": "icon128.plasmo.3c1ed2d2.png"
+        }
+    },
+    "version": "0.7.9",
+    "author": "tudou527",
+    "name": "Kimi 阅读助手",
+    "description": "享受 AI 辅助阅读的乐趣~",
+    "background": {"service_worker": "static/background/index.js"},
+    "permissions": ["storage", "activeTab", "sidePanel", "scripting"],
+    "content_scripts": [
+        {
+            "matches": ["*://*.flomoapp.com/*"],
+            "js": ["flomo.18a4fbd0.js"],
+            "all_frames": true,
+            "run_at": "document_end",
+            "css": []
+        },
+        {
+            "matches": ["*://kimi.moonshot.cn/*"],
+            "js": ["kimi.3f628149.js"],
+            "all_frames": true,
+            "run_at": "document_end",
+            "css": []
+        }
+    ],
+    "host_permissions": [
+        "https://*.moonshot.cn/*",
+        "https://*.volces.com/*",
+        "https://*.apphunt.site/*",
+        "https://*.flomoapp.com/*",
+        "file://*/*",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "web_accessible_resources": [
+        {"resources": ["tabs/sidepanel.html"], "matches": ["<all_urls>"]}
+    ],
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "chromeos": "Ctrl+Shift+E",
+                "default": "Ctrl+Shift+E",
+                "linux": "Ctrl+Shift+E",
+                "mac": "Command+Shift+E",
+                "windows": "Ctrl+Shift+E"
+            }
+        }
+    }
+}
